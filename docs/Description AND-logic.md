@@ -10,24 +10,36 @@ Diagram (rewritten for clarity):
       |       |
    Button1  Button2
       |       |
-     GND     GND
+     Vin1/GND     Vin2/GND
 
-Buttons grounded: when pressed, they pull the cathode of the diode to GND, causing current to flow → V_out gets pulled LOW.
 
-When both buttons are not pressed, both diodes are reverse-biased (actually the buttons make the circuit to be open, like if they were reverse biased)→ no current → pull-up pulls V_out HIGH.
+- The **buttons are normally open** and connected to **GND**.
+- The **diodes’ cathodes** are connected to the buttons.
+- When a button is **pressed**, it pulls the corresponding diode’s cathode to **GND**, allowing current to flow → **V_out is pulled LOW**.
 
-It behaves like a diode AND gate:
+---
 
-Only when both buttons are not pressed, V_out = HIGH
+### 🧠 Logic Behavior
 
-Pressing either button → pulls V_out LOW
+- When **both buttons are not pressed** → no current flows through the diodes (they're reverse biased) → the **pull-up resistor pulls `V_out` HIGH**.
+- If **either button is pressed**, it conducts current through the corresponding diode → **`V_out` drops to LOW**.
 
-✔️ Works exactly like an AND gate (in active-low logic).
+🔎 This behaves like a **diode AND gate**, but in **active-low logic**:
 
-🧠 Logic Truth Table:
-Button1|Button2|V_out|Logic Interpretation
-Not pressed|Not pressed|HIGH|Logic 1 AND 1 → 1|
-Pressed|Not pressed|LOW|Logic 0 AND 1 → 0|
-Not pressed|Pressed|LOW|Logic 1 AND 0 → 0|
-Pressed|Pressed|LOW|Logic 0 AND 0 → 0|
+- Only when **both buttons are not pressed**, `V_out` is HIGH.
+- Pressing **either button** forces `V_out` LOW.
 
+---
+
+### 🧪 Truth Table
+
+| Button1      | Button2      | V_out | Logic Interpretation        |
+|--------------|--------------|-------|-----------------------------|
+| Not pressed  | Not pressed  | HIGH  | 1 AND 1 → 1                 |
+| Pressed      | Not pressed  | LOW   | 0 AND 1 → 0                 |
+| Not pressed  | Pressed      | LOW   | 1 AND 0 → 0                 |
+| Pressed      | Pressed      | LOW   | 0 AND 0 → 0                 |
+
+---
+
+✔️ This is equivalent to an **AND gate with active-low inputs** (i.e., logic `1` = not pressed, logic `0` = pressed).  

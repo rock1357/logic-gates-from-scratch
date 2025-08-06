@@ -17,9 +17,7 @@ Questo progetto esplora la costruzione di porte logiche a partire da diodi e tra
 | Cartella | Contenuto |
 |----------|-----------|
 | `/ltspice` | Simulazioni elettriche in LTSpice |
-| `/logisim` | Progetti logici in Logisim Evolution |
-| `/breadboard` | Foto e descrizioni dei circuiti reali |
-| `/docs` | Documentazione, schemi e spiegazioni teoriche |
+| `/docs` | Documentazione e spiegazioni teoriche |
 | `/notes` | Appunti personali e test comportamentali |
 | `/images` | Immagini da usare nei README o documenti |
 

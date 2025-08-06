@@ -1,16 +1,17 @@
 Diagram (rewritten for clarity):
-
      5V
       |
     [10kΩ] Pull-up
       |
       +-------+--------> V_out
       |       |
-     [>]     [>]       (diodes: anode at 5V, cathode toward button)
+     [>]     [>]       (diodes: anodes to 5V, cathodes to buttons)
       |       |
-   Button1  Button2
-      |       |
-     Vin1/GND     Vin2/GND
+     [Btn1]    [Btn2]
+      |         |
+    [GND/Vin1] [GND/Vin2]
+
+
 
 
 - The **buttons are normally open** and connected to **GND**.

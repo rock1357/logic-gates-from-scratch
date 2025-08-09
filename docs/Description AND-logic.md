@@ -1,4 +1,5 @@
 Diagram (rewritten for clarity):
+
      5V
       |
     [10kΩ] Pull-up
@@ -7,9 +8,9 @@ Diagram (rewritten for clarity):
       |       |
      [>]     [>]       (diodes: anodes to 5V, cathodes to buttons)
       |       |
-     [Btn1]    [Btn2]
+     [Btn1]  [Btn2]
       |         |
-    [GND/Vin1] [GND/Vin2]
+    [GND/Vin1]  [GND/Vin2]
 
 
 

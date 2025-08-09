@@ -1,20 +1,17 @@
-const int inputPin1 = 2; //IN1
-const int inputPin2 = 4; //IN2
+const int Vcc = 4; //IN2
 const int Vout = 8; //Output pin
 
 int State = 0;
 
 void setup() {
-  pinMode(inputPin1, OUTPUT); 
-  pinMode(inputPin2, OUTPUT);
+  pinMode(Vcc, OUTPUT); 
   pinMode(Vout, INPUT);
 
   Serial.begin(9600); 
 }
 
 void loop() {
-  digitalWrite(inputPin1,HIGH); 
-  digitalWrite(inputPin2,HIGH);
+  digitalWrite(Vcc,HIGH); 
 
   State = digitalRead(Vout);
   if(State){

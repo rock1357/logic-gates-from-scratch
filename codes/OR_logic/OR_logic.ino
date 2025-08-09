@@ -1,16 +1,15 @@
-const int Vcc = 2;
-const int inputPin1 = 4;
-const int inputPin2 = 7;
-const int Vout = 8;
+const int inputPin1 = 4; //IN1
+const int inputPin2 = 7; //IN2
+const int Vout = 8; //Output pin
 
 int State = 0;
 
 void setup() {
-  pinMode(inputPin1, OUTPUT);
+  pinMode(inputPin1, OUTPUT); 
   pinMode(inputPin2, OUTPUT);
   pinMode(Vout, INPUT);
 
-  Serial.begin(9600);  // Capital 'S' in Serial – this is critical!
+  Serial.begin(9600); 
 }
 
 void loop() {
